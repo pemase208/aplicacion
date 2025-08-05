@@ -4,7 +4,20 @@ services:
   backend:
     build:
       context: ./backend
-    container_name: backend
+    container_name: aplicacion_backend
     ports:
       - "8000:8000"
+    volumes:
+      - ./backend/docs:/app/docs
+      - ./backend/aplicacion.db:/app/aplicacion.db
+    environment:
+      - DATABASE_URL=sqlite:///./aplicacion.db
+      - SECRET_KEY=development-secret-key-change-in-production
+      - ACCESS_TOKEN_EXPIRE_MINUTES=60
     restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
