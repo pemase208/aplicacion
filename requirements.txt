@@ -1,0 +1,74 @@
+# ===== DEPENDENCIAS OPTIMIZADAS DEUDOUT - UBUNTU 24.04 =====
+
+# ===== DEPENDENCIAS CORE (OBLIGATORIAS) =====
+Flask>=2.3.0,<3.0.0
+Flask-SQLAlchemy>=3.0.0,<4.0.0
+Flask-Login>=0.6.0,<1.0.0
+Werkzeug>=2.3.0,<3.0.0
+Jinja2>=3.1.0,<4.0.0
+MarkupSafe>=2.1.0,<3.0.0
+
+# ===== BASE DE DATOS =====
+SQLAlchemy>=2.0.0,<3.0.0
+greenlet>=3.0.0,<4.0.0
+
+# ===== SERVIDOR DE PRODUCCIÓN =====
+gunicorn>=21.0.0,<24.0.0
+
+# ===== GENERACIÓN DE PDFS (CON FALLBACKS) =====
+PyPDF2>=3.0.0,<4.0.0
+reportlab>=4.0.0,<5.0.0
+
+# ===== MANIPULACIÓN DE DOCUMENTOS WORD =====
+python-docx>=1.0.0,<2.0.0
+docxtpl>=0.20.0,<1.0.0
+
+# ===== PROCESAMIENTO DE DATOS =====
+pandas>=2.0.0,<3.0.0
+openpyxl>=3.1.0,<4.0.0
+XlsxWriter>=3.0.0,<4.0.0
+
+# ===== UTILIDADES WEB =====
+requests>=2.25.0,<3.0.0
+beautifulsoup4>=4.11.0,<5.0.0
+html5lib>=1.1.0,<2.0.0
+
+# ===== UTILIDADES DEL SISTEMA =====
+python-dotenv>=1.0.0,<2.0.0
+click>=8.0.0,<9.0.0
+itsdangerous>=2.0.0,<3.0.0
+blinker>=1.6.0,<2.0.0
+
+# ===== UTILIDADES DE TEXTO Y CODIFICACIÓN =====
+charset-normalizer>=3.0.0,<4.0.0
+idna>=3.0.0,<4.0.0
+urllib3>=2.0.0,<3.0.0
+certifi>=2023.0.0
+
+# ===== UTILIDADES DE PROCESAMIENTO =====
+lxml>=4.9.0,<5.0.0
+tqdm>=4.60.0,<5.0.0
+packaging>=23.0.0,<26.0.0
+six>=1.16.0,<2.0.0
+
+# ===== UTILIDADES DE CRIPTOGRAFÍA =====
+cryptography>=41.0.0,<46.0.0
+cffi>=1.15.0,<2.0.0
+pycparser>=2.21.0,<3.0.0
+
+# ===== UTILIDADES DE INTERNACIONALIZACIÓN =====
+babel>=2.12.0,<3.0.0
+tzdata>=2023.0.0
+
+# ===== DEPENDENCIAS OPCIONALES (NO BLOQUEAN INSTALACIÓN) =====
+# docxcompose>=1.4.0,<2.0.0  # Opcional: composición avanzada de documentos
+# docx2pdf>=0.1.0,<2.0.0     # Opcional: conversión DOCX a PDF
+# mammoth>=1.6.0,<2.0.0      # Opcional: conversión DOCX a HTML
+# xlrd>=2.0.0,<3.0.0         # Opcional: lectura de Excel legacy
+
+# ===== NOTAS DE INSTALACIÓN =====
+# 1. Si tienes problemas con cryptography, instala: sudo apt install python3-dev libffi-dev
+# 2. Si tienes problemas con lxml, instala: sudo apt install libxml2-dev libxslt1-dev
+# 3. Si tienes problemas con reportlab, instala: sudo apt install libfreetype6-dev
+# 4. Para desarrollo local: pip install -r requirements.txt
+# 5. Para producción: pip install -r requirements.txt --no-dev
